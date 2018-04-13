@@ -8,4 +8,6 @@
 
     * This script will query Active Directory database for the user information
 
+    * Testing new branch
+
 * Enjoy !!
