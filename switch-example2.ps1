@@ -13,7 +13,10 @@ function Get-JSUserdetails
             Write-Verbose "Query Active Directory for the user information"
             Get-ADUser -Identity $user | Out-Null 
             
+            start-sleep 5  
+            
             # Switch function proceessing 
+            
             switch($user) {
                         Administrator {'This Account has full permission in the domain'}
                         Guest {'Used for visitors'} 
