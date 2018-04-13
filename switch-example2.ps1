@@ -14,7 +14,7 @@ function Get-JSUserdetails
             Get-ADUser -Identity $user | Out-Null 
             
             # Switch function proceessing 
-            switch($temp) {
+            switch($user) {
                         Administrator {'This Account has full permission in the domain'}
                         Guest {'Used for visitors'} 
                         Rus {'This is a user account with limited permission'}
