@@ -3,15 +3,15 @@ function Get-JSUserdetails
 {
       [CMDLetBinding()]   # Creating an Advance function
       param(
-            [paramater(Mandatory=$true)]
+            [parameter(Mandatory=$true)]
             [ValidateSet("Administrator", "Guest", "Rus", "krbtgt", "Linuxtest", "CORP$")]
-            [string]$temp 
+            [string]$user 
       )   
 
       PROCESS {
             # Checking Active Directory for user details 
             Write-Verbose "Query Active Directory for the user information"
-            Get-ADUser -Identity $temp 
+            Get-ADUser -Identity $user | Out-Null 
             
             # Switch function proceessing 
             switch($temp) {
